@@ -1,0 +1,21 @@
+import random
+
+def randDice():
+    die1 = random.randint(1, 6)
+    die2 = random.randint(1, 6)
+    return die1 + die2
+
+total_rolls = 0
+num_rolls = 100
+
+for _ in range(num_rolls):
+    total_rolls += randDice()
+
+average = total_rolls / num_rolls
+
+print(f"Average of 100 rolls: {average:.2f}")
+
+
+# Matthew Beekman
+# Program 1
+# 10/9/2024
