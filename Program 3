@@ -1,0 +1,24 @@
+def calculate_sales_tax(total_sales):
+    state_tax_rate = 0.05
+    county_tax_rate = 0.025
+
+    county_sales_tax = total_sales * county_tax_rate
+    state_sales_tax = total_sales * state_tax_rate
+    total_sales_tax = county_sales_tax + state_sales_tax
+
+    return county_sales_tax, state_sales_tax, total_sales_tax
+
+def main():
+    total_sales = float(input("Enter the total sales for the month: "))
+    county_tax, state_tax, total_tax = calculate_sales_tax(total_sales)
+
+    print(f"County Sales Tax: ${county_tax:.2f}")
+    print(f"State Sales Tax: ${state_tax:.2f}")
+    print(f"Total Sales Tax: ${total_tax:.2f}")
+
+main()
+
+
+# Matthew Beekman
+# Program 3
+# 10/9/2024
